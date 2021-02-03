@@ -1,0 +1,52 @@
+.container{
+    margin: 40px 0;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+}
+
+.titletext {
+    color: #fff;
+    font-weight: 300;
+}
+.titletext span {
+    color: #01ff57;
+    font-weight: 800;
+}
+
+.titlelist li {
+    padding: 20px;
+    margin: 10px 10px;
+    list-style-type: none;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 991px){
+
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .titletext{
+        font-size: 1.2em;
+    }
+    .row .col50 {
+      width: 50%;
+    }
+    .titlelist li {
+        padding: 15px;
+    }
+  }

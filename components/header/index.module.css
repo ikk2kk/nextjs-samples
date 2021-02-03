@@ -1,0 +1,108 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .logo {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 2em;
+  }
+
+  .sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  }
+  
+  .sticky .logo{
+    color: #111;
+  }
+  
+  .navigation {
+    position: relative;
+    display: flex;
+  }
+  
+  .navigation li {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  .navigation li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  
+  .sticky .navigation li a {
+    color: #111;
+  }
+  
+  .navigation li a:hover {
+    color: #ff0157;
+  }
+
+  @media (max-width: 991px){
+    .container,
+    .sticky{
+      padding: 10px 20px;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .navigation.active{
+      width: 100%;
+      height: calc(100% - 68px);
+      position: fixed;
+      top: 68px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .navigation li {
+      margin-left: 0;
+    }
+
+    .navigation li a {
+      color: #111;
+      font-size: 1.6em;
+    }
+
+    .menuToggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background: url(../../public/img/menu.png);
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .menuToggle.active{
+      background: url(../../public/img/close.png);
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .sticky .menuToggle{
+      filter: invert(1);
+    }
+  }
